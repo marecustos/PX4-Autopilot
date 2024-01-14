@@ -5,6 +5,14 @@ run the following commands to clone the repo and install dependencies:
 git clone https://github.com/marecustos/PX4-Autopilot.git --recursive
 bash ./PX4-Autopilot/Tools/setup/ubuntu.sh
 ```
+
+Then fetch PX4 Tags ( PX4 repo use it for building ):
+```
+git remote add upstream https://github.com/PX4/PX4-Autopilot.git
+git fetch upstream
+git fetch upstream --tags
+```
+
 To run for example gazebo simulation :
 ```
 make px4_sitl gazebo-classic
