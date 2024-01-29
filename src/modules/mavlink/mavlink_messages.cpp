@@ -99,6 +99,7 @@
 #include "streams/OPEN_DRONE_ID_SYSTEM.hpp"
 #include "streams/OPTICAL_FLOW_RAD.hpp"
 #include "streams/ORBIT_EXECUTION_STATUS.hpp"
+#include "streams/PAYLOAD_STATUS.hpp"
 #include "streams/PING.hpp"
 #include "streams/POSITION_TARGET_GLOBAL_INT.hpp"
 #include "streams/POSITION_TARGET_LOCAL_NED.hpp"
@@ -443,6 +444,9 @@ static const StreamListItem streams_list[] = {
 #if defined(ORBIT_EXECUTION_STATUS_HPP)
 	create_stream_list_item<MavlinkStreamOrbitStatus>(),
 #endif // ORBIT_EXECUTION_STATUS_HPP
+#if defined(PAYLOAD_STATUS_HPP)
+	create_stream_list_item<MavlinkStreamPayloadStatus>(),
+#endif // PAYLOAD_STATUS_HPP
 #if defined(FIGURE_EIGHT_EXECUTION_STATUS_HPP)
 	create_stream_list_item<MavlinkStreamFigureEightStatus>(),
 #endif // FIGURE_EIGHT_EXECUTION_STATUS_HPP
